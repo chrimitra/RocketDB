@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPooled;
 
 @SpringBootApplication
@@ -14,7 +15,7 @@ public class RocketDbApplication {
 	}
 	
 	@Bean
-	JedisPooled jedisPooled() {
+	JedisPooled jedisPool() {
 		return new JedisPooled("192.168.1.234", 6379, "pablo", "ciaogamer123");
 	}
 

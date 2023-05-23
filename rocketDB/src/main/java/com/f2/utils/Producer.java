@@ -13,6 +13,9 @@ public class Producer {
         this.name = name;
         this.ip = ip;
     }
+    
+    public Producer() {}
+    
     public User nuovoUser(){
         return new User(Util.generateRandomIPAddress(),Util.generateUsername());
     }
